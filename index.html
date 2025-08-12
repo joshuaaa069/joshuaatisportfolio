@@ -1,0 +1,237 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Atis | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="https://facebook.com/joshua.atis.2005/">Joshua Atis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero py-5">
+    <div class="container d-flex flex-column flex-lg-row align-items-center">
+        <div class="hero-text flex-fill">
+            <h2>Hello<span class="text-primary">.</span></h2>
+            <h1 class="fw-bold">I'm <span class="hover-name">Joshua</span></h1>
+            <h3 class="fw-bold">Graphic Designer, Photographer & Web Developer</h3>
+            <div class="mt-4">
+                <a href="#contact" class="btn btn-primary me-3">Got a project?</a>
+                <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#resumeModal">My resume</a>
+            </div>
+        </div>
+        <div class="hero-img flex-fill text-center mt-4 mt-lg-0">
+            <img src="img/pic.png" alt="Joshua" class="img-fluid rounded-circle border border-3 border-primary" style="max-width:300px;">
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="skills py-3 bg-secondary text-center">
+    <div class="container">
+        <span class="mx-3">Canva</span>        
+        <span class="mx-3">HTML5</span>
+        <span class="mx-3">CSS</span>
+        <span class="mx-3">JavaScript</span>
+        <span class="mx-3">GitHub</span>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>About me</h2>
+                <p>
+                    I am a third-year Bachelor of Science in Information Technology (BSIT) student at CKC. 
+                    I’m passionate about creating projects from scratch and exploring new technologies. 
+                    My journey in tech has been shaped by a deep curiosity for problem-solving and a drive to keep learning.
+                </p>
+                <div class="d-flex mt-4">
+                    <div class="me-5">
+                        <h3 class="text-primary">27+</h3>
+                        <p>Completed Projects</p>
+                    </div>
+                    <div class="me-5">
+                        <h3 class="text-primary">95%</h3>
+                        <p>Client satisfaction</p>
+                    </div>
+                    <div>
+                        <h3 class="text-primary">3+</h3>
+                        <p>Years of experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects py-5 bg-secondary text-white" id="project">
+    <div class="container">
+        <h2 class="mb-4 text-center">My Projects</h2>
+        <div class="row g-4">
+            <!-- Web Project -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-white h-100">
+                    <div id="webCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/ako1.png" class="d-block w-100" alt="Web Project 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ako2.png" class="d-block w-100" alt="Web Project 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ako3.png" class="d-block w-100" alt="Web Project 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#webCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#webCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Me</h5>
+                        <p class="card-text">mga website unta ni pero ako sa nawng diri, kay wala pa kabuhat ug web puhon butgan kuni.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphics Project -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-white h-100">
+                    <div id="graphicsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/gd1.png" class="d-block w-100" alt="Graphics Project 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/gd2.png" class="d-block w-100" alt="Graphics Project 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/gd3.png" class="d-block w-100" alt="Graphics Project 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#graphicsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#graphicsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Poster Design</h5>
+                        <p class="card-text">A creative poster designed for a local event using Canva.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photography Project -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-white h-100">
+                    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/photo1.png" class="d-block w-100" alt="Photography 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/photo2.png" class="d-block w-100" alt="Photography 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/photo3.png" class="d-block w-100" alt="Photography 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">School & Community Moments</h5>
+                        <p class="card-text">A collection of memorable shots from school events, local fiestas, and graduation celebrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact py-5 bg-dark text-white">
+    <div class="container">
+        <h2 class="mb-4">Contact Me</h2>
+        <p class="mb-4">Got a question or a project in mind? Feel free to reach out!</p>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="https://formspree.io/f/xpwlbdzp" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <h5>Email</h5>
+                <p>joshuaatisyt01@gmail.com</p>
+                <h5>Phone</h5>
+                <p>+63 969 515 6682</p>
+                <h5>Address</h5>
+                <p>San Juan, Gingoog City, Misamis Oriental, Philippines</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/resume.png" alt="My Resume" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
