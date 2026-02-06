@@ -1,212 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Atis | Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Atis | Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-white">
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Joshua Atis</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Joshua Atis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<!-- Hero Section -->
 <section id="home" class="hero py-5 scroll-animate">
-    <div class="container d-flex flex-column flex-lg-row align-items-center">
-        <div class="hero-text flex-fill">
-            <h2>Hello<span class="text-primary">.</span></h2>
-            <h1 class="fw-bold">I'm <span class="hover-name">Joshua</span></h1>
-            <h3 class="fw-bold">Graphic Designer, Photographer & Web Developer</h3>
-            <div class="mt-4">
-                <a href="#contact" class="btn btn-primary me-3">Got a project?</a>
-                <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#resumeModal">My resume</a>
-            </div>
-        </div>
-        <div class="hero-img flex-fill text-center mt-4 mt-lg-0">
-            <img src="pic.png" alt="Joshua" class="img-fluid rounded-circle border border-3 border-primary">
-        </div>
+  <div class="container d-flex flex-column flex-lg-row align-items-center">
+    <div class="hero-text flex-fill">
+      <h2>Hello<span class="text-primary">.</span></h2>
+      <h1 class="fw-bold">I'm <span class="hover-name">Joshua</span></h1>
+      <h3 class="fw-bold">Graphic Designer, Photographer & Web Developer</h3>
     </div>
+    <div class="hero-img flex-fill text-center mt-4 mt-lg-0">
+      <img src="pic.png" alt="Joshua" class="img-fluid rounded-circle border border-3 border-primary">
+    </div>
+  </div>
 </section>
 
-<!-- Skills -->
 <section id="skills" class="skills py-3 bg-secondary text-center scroll-animate">
-    <div class="container">
-        <span class="mx-3">Canva</span>        
-        <span class="mx-3">HTML5</span>
-        <span class="mx-3">CSS</span>
-        <span class="mx-3">JavaScript</span>
-        <span class="mx-3">GitHub</span>
-    </div>
+  <div class="container">
+    <span class="mx-3">Canva</span>
+    <span class="mx-3">HTML5</span>
+    <span class="mx-3">CSS</span>
+    <span class="mx-3">JavaScript</span>
+    <span class="mx-3">GitHub</span>
+  </div>
 </section>
 
-<!-- About Section -->
 <section id="about" class="about py-5 scroll-animate">
-    <div class="container">
-        <h2>About me</h2>
-        <p>
-            I am a third-year Bachelor of Science in Information Technology (BSIT) student at CKC. 
-            I’m passionate about creating projects from scratch and exploring new technologies. 
-            My journey in tech has been shaped by a deep curiosity for problem-solving and a drive to keep learning.
-        </p>
-        <div class="d-flex mt-4 flex-wrap">
-            <div class="me-5 mb-3">
-                <h3 class="text-primary">27+</h3>
-                <p>Completed Projects</p>
-            </div>
-            <div class="me-5 mb-3">
-                <h3 class="text-primary">95%</h3>
-                <p>Client Satisfaction</p>
-            </div>
-            <div class="mb-3">
-                <h3 class="text-primary">3+</h3>
-                <p>Years of Experience</p>
-            </div>
-        </div>
-    </div>
+  <div class="container">
+    <h2>About me</h2>
+    <p>I am a third-year BSIT student at CKC, passionate about projects and learning new technologies.</p>
+  </div>
 </section>
 
-<!-- Projects Section -->
 <section id="project" class="projects py-5 bg-secondary text-white scroll-animate">
-    <div class="container">
-        <h2 class="mb-4 text-center">My Projects</h2>
-        <div class="row g-4">
-            <div class="col-md-4 scroll-animate">
-                <div class="card bg-dark text-white h-100">
-                    <div id="webCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="ako1.png" class="d-block w-100" alt="Web Project 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="ako2.png" class="d-block w-100" alt="Web Project 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="ako3.png" class="d-block w-100" alt="Web Project 3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#webCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#webCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Website Projects</h5>
-                        <p class="card-text">Sample website projects for future portfolio.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 scroll-animate">
-                <div class="card bg-dark text-white h-100">
-                    <div id="graphicsCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="gd1.png" class="d-block w-100" alt="Graphics Project 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="gd2.png" class="d-block w-100" alt="Graphics Project 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="gd3.png" class="d-block w-100" alt="Graphics Project 3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#graphicsCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#graphicsCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Poster Design</h5>
-                        <p class="card-text">A creative poster designed for a local event using Canva.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 scroll-animate">
-                <div class="card bg-dark text-white h-100">
-                    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="photo1.png" class="d-block w-100" alt="Photography 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="photo2.png" class="d-block w-100" alt="Photography 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="photo3.png" class="d-block w-100" alt="Photography 3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Photography</h5>
-                        <p class="card-text">A collection of memorable shots from school events and local celebrations.</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="mb-4 text-center">My Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4 scroll-animate">
+        <div class="card bg-dark text-white h-100">
+          <img src="ako1.png" class="card-img-top" alt="Project">
+          <div class="card-body">
+            <h5 class="card-title">Website Project</h5>
+            <p class="card-text">Sample website project description.</p>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact py-5 scroll-animate">
-    <div class="container">
-        <h2 class="mb-4">Contact Me</h2>
-        <p>Email: joshuaatisyt01@gmail.com</p>
-        <p>Phone: +63 969 515 6682</p>
-        <p>Address: San Juan, Gingoog City, Misamis Oriental, Philippines</p>
-    </div>
-</section>
-
-<!-- Resume Modal -->
-<div class="modal fade" id="resumeModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-body text-center">
-        <img src="resume.png" class="img-fluid rounded">
+      </div>
+      <div class="col-md-4 scroll-animate">
+        <div class="card bg-dark text-white h-100">
+          <img src="gd1.png" class="card-img-top" alt="Project">
+          <div class="card-body">
+            <h5 class="card-title">Poster Design</h5>
+            <p class="card-text">Creative poster using Canva.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 scroll-animate">
+        <div class="card bg-dark text-white h-100">
+          <img src="photo1.png" class="card-img-top" alt="Project">
+          <div class="card-body">
+            <h5 class="card-title">Photography</h5>
+            <p class="card-text">Community & school event photos.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<section id="contact" class="contact py-5 scroll-animate">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Email: joshuaatisyt01@gmail.com</p>
+  </div>
+</section>
 
 <script>
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.scroll-animate').forEach(el => {
-    observer.observe(el);
-});
+document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
