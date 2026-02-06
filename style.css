@@ -2,40 +2,22 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.hero h2,
-.hero h1,
-.hero h3 {
-    margin: 0;
+/* Scroll animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
 }
 
-.hero h1 {
-    font-size: 2.8rem;
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.hero h3 {
-    font-size: 1.8rem;
-    color: #ccc;
-}
-
-.hero-img img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+/* Hover effects */
 .hero-img img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #007bff;
-}
-
-.navbar-brand {
-    transition: color 0.3s ease;
-}
-
-.navbar-brand:hover {
-    color: #007bff !important;
-}
-
-.hover-name {
-    transition: color 0.3s ease;
 }
 
 .hover-name:hover {
@@ -43,25 +25,7 @@ body {
     cursor: pointer;
 }
 
-.skills span {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.about h3 {
-    font-size: 2rem;
-    margin-bottom: 0;
-}
-
-.card img {
-    transition: transform 0.3s ease;
-}
-
-.card img:hover {
-    transform: scale(1.05);
-}
-
-.card .carousel-item img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
+/* Stagger cards */
+.col-md-4.scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+.col-md-4.scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+.col-md-4.scroll-animate:nth-child(3) { transition-delay: 0.3s; }
