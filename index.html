@@ -4,110 +4,261 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joshua Atis | Portfolio</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+<style>
+/* ============================
+   RESET & BASE
+============================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #070b12;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+a { text-decoration: none; color: inherit; }
+
+/* ============================
+   NAVBAR
+============================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.nav .logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: #00d9ff;
+  letter-spacing: 2px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  font-weight: 500;
+  color: #aaa;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #00d9ff; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px; height: 3px;
+  background: #00d9ff;
+  transition: all 0.3s;
+}
+
+/* ============================
+   HERO
+============================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 60px;
+  text-align: center;
+  background: radial-gradient(circle at top, #0c1b2c, #05070c);
+}
+.hero h2 {
+  font-size: 28px; color: #00d9ff; margin-bottom: 15px;
+}
+.hero h1 {
+  font-size: 50px; margin-bottom: 15px; line-height: 1.2;
+}
+.hero h1 .hover-name { color: #00d9ff; }
+.hero h3 {
+  font-size: 20px; font-weight: 400; color: #bbb; max-width: 600px;
+  margin: 0 auto;
+}
+.hero-img img {
+  width: 180px; height: 180px;
+  border-radius: 50%; border: 4px solid #00d9ff;
+  margin-top: 30px;
+}
+
+/* ============================
+   SECTIONS
+============================ */
+section { padding: 80px 20px; }
+.skills {
+  text-align: center;
+  margin-top: 40px;
+}
+.skills span {
+  display: inline-block; margin: 10px 15px;
+  padding: 10px 20px; border-radius: 25px;
+  border: 1px solid #00d9ff; color: #00d9ff;
+  transition: all 0.3s;
+}
+.skills span:hover {
+  background: #00d9ff; color: #000;
+}
+.about p {
+  max-width: 600px; margin: 20px auto 0; line-height: 1.6; color: #bbb;
+}
+
+/* PROJECTS */
+.projects {
+  text-align: center;
+}
+.projects h2 { margin-bottom: 40px; }
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.projects .card {
+  background: #0b1422; border: 1px solid #10243a;
+  border-radius: 10px; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.projects .card img { width: 100%; height: 180px; object-fit: cover; }
+.projects .card-body { padding: 20px; }
+.projects .card:hover {
+  transform: translateY(-8px); box-shadow: 0 0 20px rgba(0,217,255,0.3);
+}
+
+/* CONTACT */
+.contact { text-align: center; }
+.contact p { color: #bbb; }
+
+/* FOOTER */
+footer { padding: 40px 20px; text-align: center; color: #777; }
+
+/* SCROLL ANIMATION */
+.scroll-animate {
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.scroll-animate.show { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links {
+    position: fixed; top:0; right:-100%;
+    width:200px; height:100vh;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column; padding: 80px 20px; gap: 30px;
+    transition: right 0.3s ease-in-out;
+  }
+  .nav-links.show { right:0; }
+  .hamburger { display: flex; }
+  .hero h1 { font-size: 36px; }
+  .hero h3 { font-size: 16px; }
+  .hero-img img { width: 150px; height: 150px; margin-top: 20px; }
+}
+</style>
 </head>
-<body class="bg-dark text-white">
+<body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Joshua Atis</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
-      </ul>
-    </div>
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="logo">Joshua</div>
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#project">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-</nav>
+</header>
 
-<section id="home" class="hero py-5 scroll-animate">
-  <div class="container d-flex flex-column flex-lg-row align-items-center">
-    <div class="hero-text flex-fill">
-      <h2>Hello<span class="text-primary">.</span></h2>
-      <h1 class="fw-bold">I'm <span class="hover-name">Joshua</span></h1>
-      <h3 class="fw-bold">Graphic Designer, Photographer & Web Developer</h3>
-    </div>
-    <div class="hero-img flex-fill text-center mt-4 mt-lg-0">
-      <img src="pic.png" alt="Joshua" class="img-fluid rounded-circle border border-3 border-primary">
-    </div>
+<!-- HERO -->
+<section id="home" class="hero scroll-animate">
+  <h2>Hello<span>.</span></h2>
+  <h1>I'm <span class="hover-name">Joshua</span></h1>
+  <h3>Graphic Designer, Photographer & Web Developer</h3>
+  <div class="hero-img">
+    <img src="pic.png" alt="Joshua">
   </div>
 </section>
 
-<section id="skills" class="skills py-3 bg-secondary text-center scroll-animate">
-  <div class="container">
-    <span class="mx-3">Canva</span>
-    <span class="mx-3">HTML5</span>
-    <span class="mx-3">CSS</span>
-    <span class="mx-3">JavaScript</span>
-    <span class="mx-3">GitHub</span>
-  </div>
+<!-- SKILLS -->
+<section class="skills scroll-animate">
+  <span>Canva</span>
+  <span>HTML5</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+  <span>GitHub</span>
 </section>
 
-<section id="about" class="about py-5 scroll-animate">
-  <div class="container">
-    <h2>About me</h2>
-    <p>I am a third-year BSIT student at CKC, passionate about projects and learning new technologies.</p>
-  </div>
+<!-- ABOUT -->
+<section id="about" class="about scroll-animate">
+  <h2>About Me</h2>
+  <p>I am a third-year BSIT student at CKC, passionate about projects and learning new technologies.</p>
 </section>
 
-<section id="project" class="projects py-5 bg-secondary text-white scroll-animate">
-  <div class="container">
-    <h2 class="mb-4 text-center">My Projects</h2>
-    <div class="row g-4">
-      <div class="col-md-4 scroll-animate">
-        <div class="card bg-dark text-white h-100">
-          <img src="ako1.png" class="card-img-top" alt="Project">
-          <div class="card-body">
-            <h5 class="card-title">Website Project</h5>
-            <p class="card-text">Sample website project description.</p>
-          </div>
-        </div>
+<!-- PROJECTS -->
+<section id="project" class="projects scroll-animate">
+  <h2>My Projects</h2>
+  <div class="cards">
+    <div class="card scroll-animate">
+      <img src="ako1.png" alt="Website Project">
+      <div class="card-body">
+        <h5>Website Project</h5>
+        <p>Sample website project description.</p>
       </div>
-      <div class="col-md-4 scroll-animate">
-        <div class="card bg-dark text-white h-100">
-          <img src="gd1.png" class="card-img-top" alt="Project">
-          <div class="card-body">
-            <h5 class="card-title">Poster Design</h5>
-            <p class="card-text">Creative poster using Canva.</p>
-          </div>
-        </div>
+    </div>
+    <div class="card scroll-animate">
+      <img src="gd1.png" alt="Poster Design">
+      <div class="card-body">
+        <h5>Poster Design</h5>
+        <p>Creative poster using Canva.</p>
       </div>
-      <div class="col-md-4 scroll-animate">
-        <div class="card bg-dark text-white h-100">
-          <img src="photo1.png" class="card-img-top" alt="Project">
-          <div class="card-body">
-            <h5 class="card-title">Photography</h5>
-            <p class="card-text">Community & school event photos.</p>
-          </div>
-        </div>
+    </div>
+    <div class="card scroll-animate">
+      <img src="photo1.png" alt="Photography">
+      <div class="card-body">
+        <h5>Photography</h5>
+        <p>Community & school event photos.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact py-5 scroll-animate">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>Email: joshuaatisyt01@gmail.com</p>
-  </div>
+<!-- CONTACT -->
+<section id="contact" class="contact scroll-animate">
+  <h2>Contact Me</h2>
+  <p>Email: joshuaatisyt01@gmail.com</p>
 </section>
 
+<footer>
+  <p>© 2026 Joshua Atis — Graphic Designer & Web Developer</p>
+</footer>
+
+<!-- JAVASCRIPT -->
 <script>
+// Scroll Animations
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) entry.target.classList.add('show');
-  });
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
 }, { threshold: 0.15 });
-
 document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+
+// Hamburger Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); hamburger.classList.toggle('active'); });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
